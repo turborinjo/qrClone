@@ -1,0 +1,86 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap');
+$font-family: 'Outfit', sans-serif;
+
+// Widths
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+$card-width: 310px;
+$card-height: 485px;
+
+// Colors
+$dark-blue: hsl(218, 44%, 22%);
+$grayish-blue: hsl(220, 15%, 55%);
+$light-gray: hsl(212, 45%, 89%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+
+  background: $light-gray;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: $card-width;
+  height: $card-height;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: $white;
+  border-radius: 15px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.1) 0px 8px 6px -8px;
+}
+
+.image {
+  width: calc($card-width - 26px);
+  margin: 13px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.title {
+  font-family: $font-family;
+  color: $dark-blue;
+  font-weight: 700;
+  width: 80%;
+  margin: 10px 0 20px 0;
+  font-size: 1.3em;
+  opacity: 0.9;
+}
+
+.description {
+  font-family: $font-family;
+  color: $grayish-blue;
+  width: 80%;
+  font-size: 0.9em;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  font-family: $font-family;
+  font-size: 11px;
+  transform: translate(50%, -100%);
+  text-align: center;
+  opacity: 0.3;
+}
+.attribution a {
+  color: hsl(0, 0%, 32%);
+}
